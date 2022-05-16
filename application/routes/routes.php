@@ -1,0 +1,9 @@
+<?php
+
+$routesList = [
+    '/' => ['HomeController' => 'index'],
+
+
+];
+
+
