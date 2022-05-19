@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 function debug($str){
-   echo '<br>' . var_dump($str) . '<br>';
+   echo '<br/>' . var_dump($str) . '<br/>';
 }
 
 spl_autoload_register(function ($class){
