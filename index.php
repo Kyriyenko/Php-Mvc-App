@@ -1,12 +1,7 @@
 <?php
-
-require './vendor/larapack/dd/src/helper.php';
-require './vendor/autoload.php';
-require './routes/web.php';
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/routes/web.php';
 
 use App\App as Application;
 
-
-
-
- Application::run();
+Application::run();

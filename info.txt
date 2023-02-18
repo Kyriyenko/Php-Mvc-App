@@ -1,5 +1,0 @@
-1.compact function
-2.extract function
-3.strtolower
-4.ucfirst
-5.ob_start

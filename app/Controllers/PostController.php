@@ -13,8 +13,13 @@ class PostController
         echo View::view('post.post', compact('post'));
     }
 
+    public function test(): void
+    {
+        echo 'test';
+    }
+
     public function store(): void
     {
-        Route::redirect('/posts');
+        echo 'hi 111';
     }
 }

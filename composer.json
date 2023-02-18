@@ -1,10 +1,15 @@
 {
   "autoload": {
     "psr-4": {
-      "App\\": "app"
+      "App\\": "app/"
     }
   },
   "require": {
-    "larapack/dd": "1.*"
+    "larapack/dd": "1.*",
+    "guzzlehttp/guzzle": "^7.5",
+    "fzaninotto/faker": "^1.5"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.2"
   }
 }
