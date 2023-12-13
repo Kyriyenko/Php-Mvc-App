@@ -9,7 +9,7 @@ class App
 {
     public static function run(): void
     {
-        $requestMethod =  ucfirst(strtolower($_SERVER['REQUEST_METHOD']));
+        $requestMethod = ucfirst(strtolower($_SERVER['REQUEST_METHOD']));
         $methodName = 'getRoutes' . $requestMethod;
 
         foreach (Route::$methodName() as $getRoutesConf) {

@@ -1,11 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php echo $_SESSION['title'] ?? 'title'; ?></title>
-</head>
-<body>
+<?php
 
+$isAuth = App\Library\AuthHelper::isAuth();
+$userRole = App\Library\AuthHelper::getUserRole();
+
+?>
+
+<header>
+    <h1>Аренда Авто</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Головна</a></li>
+            <li><a href="/about-us">Про нас</a></li>
+            <?php if ($isAuth) echo '<li><a href="#">Мої угоди</a></li>'; ?>
+            <?php if ($isAuth && $userRole === 'worker') echo '<li><a href="/user/cars">Мої авто</a></li>'; ?>
+            <?php if (!$isAuth) echo '<li><a href="/login">Увійти</a></li><li><a href="/registration">Реєстрація</a></li>'; ?>
+            <?php if ($isAuth) echo '<li><a href="/profile">Профіль</a></li><li><a href="/log-out">Вийти</a></li>'; ?>
+        </ul>
+    </nav>
+</header>
